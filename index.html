@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.H. Porfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb1f4c0560.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/A.H..png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>BSIT Student</p>
+            <h1>Hi, I'm <span>Arveen</span><br>Hernandez<br>From Dasmariñas Cavite</h1>
+        </div>
+    </div>
+</div>
+<!--- ------------------about---------------- ----->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/user.png">
+            </div>
+            <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>an open minded and hard-working person, 
+                who is willing to learn and gain experience in order to contribute more for the sake of the oraganization's development. I believe, to enhance my skill and knowledge is to push yourself to the limits and
+                 be confident that you can do your best in a fair manner.</p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab ('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab ('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab ('education')">Education</p>
+            </div>
+            <div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Visual Studio</span><br>HTML & CSS</li>
+                        <li><span>Microsoft Office</span><br>Word, Excel, PPT, etc.</li>
+                        <li><span>Editing</span><br>Photoshop, Video Editing</li>
+                        <li><span>Design Thinking</span></li>
+                        <li><span>Computer Literacy</span><br>Typing, Emailing, Printing, etc.</li>
+                        <li><span>Communication</span></li>
+                        <li><span>Machine Operator</span><br>Production Operator</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2019 - 2020</span><br>Production Operator & Mover in HARADA Inc, FCIE</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019 - Present</span><br>BSIT 1st year to 4th year College in City College of Tagaytay</li>
+                        <li><span>2018 - 2019</span><br>BSCrim 1st year College in NCST</li>
+                        <li><span>2016 - 2018</span><br>HUMSS in Philippine Christian University</li>
+                        <li><span>2012 - 2016</span><br>High School in MINHS-SWA</li>
+                        <li><span>2009 - 2012</span><br> Elementary in Silang Central School </li>
+                        <li><span>2005 - 2006</span><br>Preschool in Dorothy James Learning Center</li>
+                    </ul>
+                </div>
+            </div>   
+            </div>
+        </div>
+    </div>
+</div>
+<!-- My Projects -->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="Images/Project 1.png">
+                <div class="layer">
+                    <h3>Tagaytay Profiling System</h3>
+                    <p>This Capstone Project is about Tagaytay Profiling System wherein it is used by the government
+                        to monitor every residents in Tagaytay.  
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> arveenhernandez20@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i> 09560643842</p>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/markarveen.hernandez"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                <a href="Images/Arveen-Hernandez.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © A.H. Made by Arveen Hernandez BSIT 4-3 <i class="fa-solid fa-computer"></i></p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzT4_6igFaVjIiDdTV6D9N_1ruPojXLyyHeig6YMRsPAJ1wnf5dOqOgHsJ4N4_7eayKEQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
